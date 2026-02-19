@@ -678,7 +678,7 @@ For support, email hello@cloud9cafe.com or open an issue in the repository.
 
 ---
 
-**Made with ☕ and 💻 by Cloud 9 Cafe Team**
+**Made  by MoredXD for Cloud 9 Cafe Team**
 
 *Last Updated: February 2026*
 *Version: 1.0.0*
