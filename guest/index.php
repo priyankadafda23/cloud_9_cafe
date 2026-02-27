@@ -1,5 +1,5 @@
 <?php
-$pageTitle = 'Cloud 9 Cafe | Home';
+$pageTitle = 'Cloud9 Cafe | Home';
 require_once __DIR__ . '/../includes/header.php';
 ?>
 
@@ -7,7 +7,7 @@ require_once __DIR__ . '/../includes/header.php';
     <div class="container">
         <a class="navbar-brand d-flex align-items-center" href="#home">
             <span class="brand-mark">C9</span>
-            <span class="brand-text">Cloud 9 Cafe</span>
+            <span class="brand-text">Cloud9 Cafe</span>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#guestNavbar" aria-controls="guestNavbar" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -30,7 +30,7 @@ require_once __DIR__ . '/../includes/header.php';
     <div class="container">
         <div class="row align-items-center g-4">
             <div class="col-lg-7 hero-copy">
-                <span class="hero-eyebrow">Cloud 9 Cafe Experience</span>
+                <span class="hero-eyebrow">Cloud9 Cafe Experience</span>
                 <h1 class="hero-title">Handcrafted coffee, warm pastries, and moments worth savoring.</h1>
                 <p class="hero-subtitle">Step into a calm corner of the city where every cup is brewed with care and every bite feels like home.</p>
                 <div class="hero-actions d-flex flex-wrap gap-3">
@@ -44,7 +44,7 @@ require_once __DIR__ . '/../includes/header.php';
                     <ul class="hero-list list-unstyled mb-0">
                         <li><i class="bi bi-cup-hot"></i> Signature House Blend</li>
                         <li><i class="bi bi-clock"></i> Open Daily: 8:00 AM - 10:00 PM</li>
-                        <li><i class="bi bi-geo-alt"></i> 42 Brew Lane, Downtown</li>
+                        <li><i class="bi bi-geo-alt"></i> Rajkot, Gujarat</li>
                     </ul>
                 </div>
             </div>
@@ -68,8 +68,14 @@ require_once __DIR__ . '/../includes/header.php';
                         <h3>Caramel Cloud Latte</h3>
                         <p>Velvety espresso layered with steamed milk and caramel drizzle.</p>
                         <div class="menu-meta">
-                            <span>$6.50</span>
-                            <a href="/cloud_9_cafe/guest/menu.php">View More</a>
+                            <span>350/-</span>
+                            <?php
+if (isset($_GET['user']) && $_GET['user'] === 'loggedin') {
+    echo '<a href="/cloud_9_cafe/guest/menu.php">Buy Now</a>';
+} else {
+    echo '<a href="/cloud_9_cafe/guest/auth/login.php">Buy Now</a>';
+}
+?>
                         </div>
                     </div>
                 </article>
@@ -82,8 +88,14 @@ require_once __DIR__ . '/../includes/header.php';
                         <h3>Hazelnut Mocha</h3>
                         <p>Dark cocoa, toasted hazelnut, and espresso finished with light foam.</p>
                         <div class="menu-meta">
-                            <span>$7.00</span>
-                            <a href="/cloud_9_cafe/guest/menu.php">View More</a>
+                            <span>400/-</span>
+                            <?php
+if (isset($_GET['user']) && $_GET['user'] === 'loggedin') {
+    echo '<a href="/cloud_9_cafe/guest/menu.php">Buy Now</a>';
+} else {
+    echo '<a href="/cloud_9_cafe/guest/auth/login.php">Buy Now</a>';
+}
+?>
                         </div>
                     </div>
                 </article>
@@ -96,8 +108,14 @@ require_once __DIR__ . '/../includes/header.php';
                         <h3>Butter Croissant Set</h3>
                         <p>Fresh-baked croissant served with a choice of drip coffee or tea.</p>
                         <div class="menu-meta">
-                            <span>$5.25</span>
-                            <a href="/cloud_9_cafe/guest/menu.php">View More</a>
+                            <span>250/-</span>
+                            <?php
+if (isset($_GET['user']) && $_GET['user'] === 'loggedin') {
+    echo '<a href="/cloud_9_cafe/guest/menu.php">Buy Now</a>';
+} else {
+    echo '<a href="/cloud_9_cafe/guest/auth/login.php">Buy Now</a>';
+}
+?>
                         </div>
                     </div>
                 </article>
@@ -111,9 +129,9 @@ require_once __DIR__ . '/../includes/header.php';
         <div class="row align-items-center g-4">
             <div class="col-lg-6">
                 <div class="about-card">
-                    <p class="about-overline">About Cloud 9 Cafe</p>
+                    <p class="about-overline">About Cloud9 Cafe</p>
                     <h2>Rooted in quality, designed for comfort.</h2>
-                    <p>Cloud 9 Cafe started with one goal: create a welcoming place where premium coffee and honest food meet relaxed hospitality.</p>
+                    <p>Cloud9 Cafe started with one goal: create a welcoming place where premium coffee and honest food meet relaxed hospitality.</p>
                     <ul class="about-list list-unstyled">
                         <li><i class="bi bi-check2-circle"></i> Ethically sourced coffee beans</li>
                         <li><i class="bi bi-check2-circle"></i> Freshly baked pastries every morning</li>
@@ -148,13 +166,13 @@ require_once __DIR__ . '/../includes/header.php';
     <div class="container">
         <div class="row g-4">
             <div class="col-lg-4">
-                <h5>Cloud 9 Cafe</h5>
+                <h5>Cloud9 Cafe</h5>
                 <p>Your daily destination for handcrafted coffee and fresh comfort food.</p>
             </div>
             <div class="col-lg-4">
                 <h5>Contact</h5>
-                <p><i class="bi bi-geo-alt"></i> 42 Brew Lane, Downtown</p>
-                <p><i class="bi bi-telephone"></i> +1 (555) 019-9090</p>
+                <p><i class="bi bi-geo-alt"></i> Rajkot, Gujarat</p>
+                <p><i class="bi bi-telephone"></i>+91 98765 43210</p>
                 <p><i class="bi bi-envelope"></i> hello@cloud9cafe.com</p>
             </div>
             <div class="col-lg-4">
@@ -168,7 +186,7 @@ require_once __DIR__ . '/../includes/header.php';
         </div>
         <hr>
         <div class="footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-2">
-            <small>&copy; <span id="currentYear">2026</span> Cloud 9 Cafe. All rights reserved.</small>
+            <small>&copy; <span id="currentYear">2026</span> Cloud9 Cafe. All rights reserved.</small>
             <small><a href="/cloud_9_cafe/guest/contact.php">Send us a message</a></small>
         </div>
     </div>

@@ -94,7 +94,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             } else {
                 $insertStmt = $pdo->prepare(
                     'INSERT INTO users (full_name, email, password_hash, role, phone, is_active)
-                     VALUES (:full_name, :email, :password_hash, :role, :phone, 1)'
+                    VALUES (:full_name, :email, :password_hash, :role, :phone, 1)'
                 );
 
                 $insertStmt->execute([
@@ -181,7 +181,7 @@ require_once __DIR__ . '/../../includes/header.php';
 
                                     <div class="col-md-6">
                                         <label for="regPhone" class="form-label">Phone</label>
-                                        <input type="tel" class="form-control register-input<?php echo $fieldErrors['phone'] !== '' ? ' is-invalid' : ''; ?>" id="regPhone" name="phone" maxlength="20" autocomplete="tel" placeholder="+1 555 123 4567" value="<?php echo e($formData['phone']); ?>" required>
+                                        <input type="tel" class="form-control register-input<?php echo $fieldErrors['phone'] !== '' ? ' is-invalid' : ''; ?>" id="regPhone" name="phone" maxlength="20" autocomplete="tel" placeholder="+91 9999999999" value="<?php echo e($formData['phone']); ?>" required>
                                         <div class="invalid-feedback" id="regPhoneError"><?php echo e($fieldErrors['phone']); ?></div>
                                     </div>
 
